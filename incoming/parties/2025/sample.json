@@ -1,0 +1,71 @@
+{
+  "application_name": "E-Commerce Platform",
+  "report_date": "2024-12-25T12:00:00Z",
+  "services": [
+    {
+      "name": "User Service",
+      "status": "Healthy",
+      "uptime": "99.98%",
+      "response_time_ms": 120,
+      "requests_served": 150000
+    },
+    {
+      "name": "Product Catalog Service",
+      "status": "Healthy",
+      "uptime": "99.95%",
+      "response_time_ms": 90,
+      "requests_served": 230000,
+      "errors": {
+        "database_errors": 5,
+        "cache_misses": 50
+      }
+    },
+    {
+      "name": "Order Service",
+      "status": "Degraded",
+      "uptime": "97.85%",
+      "response_time_ms": 350,
+      "requests_served": 75000,
+      "issues": [
+        {
+          "description": "High latency due to database locks",
+          "severity": "Medium",
+          "timestamp": "2024-12-25T10:45:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Payment Service",
+      "status": "Healthy",
+      "uptime": "99.99%",
+      "response_time_ms": 110,
+      "requests_served": 65000,
+      "transactions": {
+        "total": 64500,
+        "successful": 64200,
+        "failed": 300
+      }
+    },
+    {
+      "name": "Inventory Service",
+      "status": "Healthy",
+      "uptime": "99.96%",
+      "response_time_ms": 100,
+      "requests_served": 80000
+    },
+    {
+      "name": "Shipping Service",
+      "status": "Healthy",
+      "uptime": "99.97%",
+      "response_time_ms": 95,
+      "requests_served": 50000
+    }
+  ],
+  "summary": {
+    "total_requests_served": 650000,
+    "average_response_time_ms": 144,
+    "healthy_services": 5,
+    "degraded_services": 1,
+    "unhealthy_services": 0
+  }
+}

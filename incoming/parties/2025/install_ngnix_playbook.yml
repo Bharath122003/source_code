@@ -1,0 +1,21 @@
+---
+- name: Install Nginx 
+  hosts: localhost
+  gather_facts: no
+  become: yes
+  
+  tasks:
+    - name: update the packages
+      apt:
+        update_cache: yes
+   
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+    
